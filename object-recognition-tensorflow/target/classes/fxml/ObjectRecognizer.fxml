@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="594.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sudheerherle.ObjectRecognition.RecognizerController">
+   <children>
+      <Accordion layoutX="14.0" layoutY="14.0" prefHeight="74.0" prefWidth="572.0" />
+      <ImageView fx:id="imgview" fitHeight="319.0" fitWidth="580.0" layoutX="14.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="predictButton" layoutX="14.0" layoutY="555.0" mnemonicParsing="false" onAction="#Predict" prefHeight="25.0" prefWidth="580.0" text="Predict" />
+      <TitledPane animated="false" layoutX="14.0" layoutY="452.0" prefHeight="96.0" prefWidth="580.0" text="Result">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="75.0" prefWidth="570.0">
+               <children>
+                  <ProgressBar fx:id="predcitionBar" layoutX="80.0" layoutY="35.0" prefHeight="18.0" prefWidth="482.0" progress="0.0" />
+                  <Label fx:id="predictionLabel" layoutX="14.0" layoutY="11.0" text="Prediction:" />
+                  <Label layoutX="14.0" layoutY="36.0" prefHeight="17.0" prefWidth="62.0" text="Accuracy:" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="12.0" layoutY="14.0" prefHeight="74.0" prefWidth="580.0" text="Tensorflow Inception">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="48.0" prefWidth="553.0">
+               <children>
+                  <TextField fx:id="InceptionPathTxt" disable="true" layoutX="14.0" layoutY="12.0" prefHeight="25.0" prefWidth="492.0" />
+                  <Button fx:id="BrowseInception" layoutX="511.0" layoutY="12.0" mnemonicParsing="false" onAction="#BrowseInception" prefHeight="25.0" prefWidth="56.0" text="Browse" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <Button fx:id="BrowseImage" layoutX="12.0" layoutY="421.0" mnemonicParsing="false" onAction="#BrowseImage" prefHeight="25.0" prefWidth="91.0" text="Select Image" />
+   </children>
+</AnchorPane>
